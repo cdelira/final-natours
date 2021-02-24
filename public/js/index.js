@@ -23,7 +23,7 @@ if(loginForm){
         const email = document.getElementById('email').value; 
         const password = document.getElementById('password').value;
         e.preventDefault();
-        console.log(email);
+       // console.log(email);
         login(email,password); 
     });
 }
@@ -41,7 +41,7 @@ if(userDataForm){
         form.append('emai',document.getElementById('email').value);
         form.append('photo',document.getElementById('photo').files[0]);
 
-        console.log(form); 
+       // console.log(form); 
 
         updateSettings(form,'data'); 
     })

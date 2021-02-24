@@ -8,7 +8,7 @@ const handleCastErrorDB = err =>{
 const handleDuplicateFieldsDB = err =>{
 
     const value = err.errmsg.match(/(["'])(\\?.)*?\1/)[0]; 
-    console.log(value); 
+    //console.log(value); 
     const message = 'Duplicate field value. Please use another value!'
 
     return new AppError(message, 400);
@@ -99,7 +99,7 @@ module.exports = (err,req,res,next) =>{
         if(error.name ==='JsonWebTokenError') error = handleJWTError(); 
         if(error.name ==='TokenExpiredError') error = handleJWTExpiredError(); 
 
-        console.log(err0r.message); 
+        console.log(error.message); 
 
         sendErrorProd(error,req,res); 
     }
